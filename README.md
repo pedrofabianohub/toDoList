@@ -130,7 +130,8 @@ Claro! Aqui está a seção formatada com **tabelas**, **emojis** e uma aparênc
 
 ---
 
-🖥️ Funcionalidades Detalhadas
+🖥️ Funcionalidades Detalhadas:
+
 1️⃣ Criar Tarefa
 📍 Acesse /api/create para abrir o formulário de criação.
 📝 Preencha os campos:

@@ -1,6 +1,6 @@
 # ToDoList - Gerenciador de Tarefas
 
-Bem-vindo ao **ToDoList**, um aplicativo Laravel para gerenciar tarefas do dia a dia. Este projeto foi desenvolvido para ajudar os usuários a criar, editar, visualizar e excluir tarefas, além de acompanhar o progresso diário.
+Bem-vindo ao **ToDoList**, um aplicativo Laravel para gerenciar tarefas do dia a dia. Este projeto foi desenvolvido para uma entrevista técnica em uma empresa de técnologia
 
 ---
 
@@ -133,7 +133,9 @@ Claro! Aqui está a seção formatada com **tabelas**, **emojis** e uma aparênc
 🖥️ Funcionalidades Detalhadas:
 
 1️⃣ Criar Tarefa
+
 📍 Acesse /api/create para abrir o formulário de criação.
+
 📝 Preencha os campos:
 
 Título: Nome da tarefa

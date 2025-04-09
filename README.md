@@ -1,66 +1,157 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ToDoList - Gerenciador de Tarefas
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Bem-vindo ao **ToDoList**, um aplicativo Laravel para gerenciar tarefas do dia a dia. Este projeto foi desenvolvido para ajudar os usuários a criar, editar, visualizar e excluir tarefas, além de acompanhar o progresso diário.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📋 Funcionalidades
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Criar Tarefas**: Adicione novas tarefas com título, descrição, data de entrega e status.
+- **Editar Tarefas**: Atualize as informações de uma tarefa existente.
+- **Excluir Tarefas**: Remova tarefas que não são mais necessárias.
+- **Visualizar Progresso**: Acompanhe o progresso diário das tarefas. (Falta implementar)
+- **Filtrar Tarefas**: Filtre tarefas por status (pendente, em andamento, concluída). (Falta implementar)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🛠️ Tecnologias Utilizadas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Laravel 12.x**: Framework PHP para desenvolvimento backend.
+- **MySQL**: Banco de dados relacional para armazenar tarefas e usuários.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🚀 Configuração do Projeto
 
-## Laravel Sponsors
+### Pré-requisitos
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Certifique-se de ter as seguintes ferramentas instaladas:
 
-### Premium Partners
+- **PHP 8.2+**
+- **Composer**
+- **MySQL**
+- **Servidor local** (como XAMPP, Laragon ou Laravel Sail)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Passo a Passo
 
-## Contributing
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   cd seu-repositorio
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. **Instale as dependências do PHP**:
+   ```bash
+   composer install
 
-## Code of Conduct
+3. **Configure o arquivo .env: Copie o arquivo .env.example para .env**:
+   ```bash
+   cp .env.example .env
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4. **Atualize as variáveis de ambiente no arquivo .env**:
+   ```bash
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=projeto_todo
+    DB_USERNAME=root
+    DB_PASSWORD=sua_senha
 
-## Security Vulnerabilities
+5. **Gere a chave da aplicação**:
+   ```bash 
+    php artisan key:generate
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. **Execute as migrações e seeders: Crie as tabelas no banco de dados e insira dados iniciais**:
+   ```bash
+   php artisan migrate --seed
 
-## License
+7. **Inicie o servidor de desenvolvimento**:
+   ```bash
+   php artisan serve
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+8. Acesse o projeto no navegador em **http://localhost:8000/**
+
+📁 Estrutura de Diretórios:
+
+🧠 app/Http/Controllers/
+Controladores responsáveis pela lógica de negócio:
+
+ApiController.php: Gerencia as operações CRUD para tarefas.
+
+AuthController.php: Gerencia a autenticação de usuários.
+
+🖼️ resources/views/
+Templates Blade:
+
+home.blade.php: Página inicial com a lista de tarefas.
+
+createTask.blade.php: Formulário para criar nova tarefa.
+
+edit.blade.php: Formulário para editar tarefa.
+
+readById.blade.php: Detalhes de uma tarefa.
+
+components/: Componentes reutilizáveis (botões, layouts).
+
+🧭 routes/web.php
+Define as rotas principais da aplicação.
+
+🎨 public/assets/css/style.css
+Arquivo principal de estilos CSS.
+
+🗃️ database/migrations/
+Scripts para criação das tabelas no banco de dados.
+
+🌱 database/seeders/
+Popular o banco com dados iniciais (fakes ou default).
+
+Claro! Aqui está a seção formatada com **tabelas**, **emojis** e uma aparência bonita para seu README:
+
+---
+
+## 🔑 Rotas Principais
+
+### 🗂️ **Tarefas**
+
+| Método | Rota                  | Descrição                         |
+|--------|------------------------|-----------------------------------|
+| GET    | `/`                    | Página inicial (lista tarefas)   |
+| GET    | `/api/create`          | Formulário para criar             |
+| POST   | `/api/createPost`      | Salva uma nova tarefa             |
+| GET    | `/api/update/{id}`     | Formulário para editar tarefa     |
+| POST   | `/api/updatePost/{id}` | Atualiza uma tarefa existente     |
+| GET    | `/api/delete/{id}`     | Exclui uma tarefa                 |
+
+### 🔐 **Autenticação** (Falta implementar)
+
+| Método | Rota         | Descrição          |
+|--------|--------------|--------------------|
+| GET    | `/login`     | Página de login    |
+| GET    | `/register`  | Página de registro |
+
+---
+
+🖥️ Funcionalidades Detalhadas
+1️⃣ Criar Tarefa
+📍 Acesse /api/create para abrir o formulário de criação.
+📝 Preencha os campos:
+
+Título: Nome da tarefa
+
+Descrição: Detalhes da tarefa
+
+Data de Entrega: Escolha uma data e hora
+✅ Clique em "Criar task" para salvar.
+
+2️⃣ Editar Tarefa
+✏️ Acesse /api/update/{id} para editar uma tarefa.
+🔧 Atualize os campos desejados
+💾 Clique em "Editar task" para salvar as alterações.
+
+3️⃣ Excluir Tarefa
+🗑️ Clique no botão "Deletar" na lista de tarefas para remover uma tarefa.
+
+4️⃣ Filtrar Tarefas
+🔍 Use o seletor na página inicial para filtrar tarefas por status (pendente, concluída, etc).
+
+
+

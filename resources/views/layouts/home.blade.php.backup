@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="./assets/images/logo.png" alt="Logo">
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Navigation -->
+            <nav class="navigation">
+                <a href="#" class="btn btn-primary">Criar tarefa</a>
+            </nav>
+
+            <!-- Main Section -->
+            <section class="main">
+                <!-- Progress Section -->
+                <section class="graph">
+                    <header class="graph_header">
+                        <h2>Progresso do dia</h2>
+                        <hr>
+                        <div class="graph_header_date">
+                            <img src="./assets/images/icon-prev.png" alt="">
+                            <p>Hoje</p>
+                            <img src="./assets/images/icon-next.png" alt="">
+
+                        </div>
+                    </header>
+                    <div class="graph_details">
+                        <h3>Tarefas: 3/9</h3>
+                        <div class="graph_placeholder"></div>
+                        <div class="tasks_left_footer">
+                            <img src="./assets/images/icon-info.png" alt="">
+                            <p class="graph_header_tasks_left">Sexo bolado a 3</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Task List Section -->
+                <section class="list">
+                    <header class="list_header">
+                        <select name="task_filter" id="task_filter" class="list_header_select">
+                            <option value="">Tarefas</option>
+                            <option value="">Tarefas</option>
+                            <option value="">Tarefas</option>
+                            <option value="">Tarefas</option>
+                        </select>
+                    </header>
+                    <div class="task_list">
+                        <!-- Task Item -->
+                        <article class="task">
+                            <div class="task_title">
+                                <input type="checkbox" id="task_1">
+                                <label for="task_1" style="margin-left: 10px">Título da tarefa</label>
+                            </div>
+                            <div class="task_status">
+                                <div class="sphere"></div>
+                                <span>Pendente</span>
+                            </div>
+                            <div class="task_actions">
+                                <a href="#" class="btn btn-edit">
+                                    <img src="./assets/images/icon-edit.png" alt="Editar">
+                                </a>
+                                <a href="#" class="btn btn-delete">
+                                    <img src="./assets/images/icon-delete.png" alt="Deletar">
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
